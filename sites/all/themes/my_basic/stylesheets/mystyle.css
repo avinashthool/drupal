@@ -1,0 +1,17 @@
+/* line 1, ../sass/mystyle.scss */
+#side-carousel-hero {
+  width: 100% !important;
+}
+/* line 3, ../sass/mystyle.scss */
+#side-carousel-hero item {
+  width: 100% !important;
+}
+/* line 6, ../sass/mystyle.scss */
+#side-carousel-hero .left {
+  text-shadow: none !important;
+  background-image: none !important;
+}
+/* line 11, ../sass/mystyle.scss */
+#side-carousel-hero .right {
+  background-image: none !important;
+}

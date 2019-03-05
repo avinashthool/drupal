@@ -1,0 +1,13 @@
+diff --git a/sites/all/modules/i18n/i18n_node/i18n_node.pages.inc b/sites/all/modules/i18n/i18n_node/i18n_node.pages.inc
+index a8adc7a..753119a 100644
+--- a/sites/all/modules/i18n/i18n_node/i18n_node.pages.inc
++++ b/sites/all/modules/i18n/i18n_node/i18n_node.pages.inc
+@@ -234,7 +234,7 @@ function i18n_node_select_translation_submit($form, &$form_state) {
+  * Node title autocomplete callback
+  */
+ function i18n_node_autocomplete($type, $language, $string = '') {
+-  $params = array('type' => $type, 'language' => $language, 'tnid' => 0);
++  $params = array( 'language' => $language, 'tnid' => 0);
+   $matches = array();
+   foreach (_i18n_node_references($string, 'contains', $params) as $id => $row) {
+     // Add a class wrapper for a few required CSS overrides.

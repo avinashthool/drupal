@@ -1,0 +1,32 @@
+diff --git a/CHANGELOG.txt b/CHANGELOG.txt
+old mode 100644
+new mode 100755
+diff --git a/README.txt b/README.txt
+old mode 100644
+new mode 100755
+diff --git a/js/webform_ajax.js b/js/webform_ajax.js
+old mode 100644
+new mode 100755
+diff --git a/webform_ajax.info b/webform_ajax.info
+old mode 100644
+new mode 100755
+diff --git a/webform_ajax.install b/webform_ajax.install
+old mode 100644
+new mode 100755
+diff --git a/webform_ajax.module b/webform_ajax.module
+old mode 100644
+new mode 100755
+index 79449b4..39ef75f
+--- a/webform_ajax.module
++++ b/webform_ajax.module
+@@ -128,7 +128,9 @@ function webform_ajax_form_webform_client_form_alter(&$form, $form_state, $form_
+         // As long as buttons HTML id are causing problems, and it has bad
+         // consequences on pages where Webform AJAX is active, we'll force
+         // custom ids on AJAXed Webform's buttons.
+-        $form['actions'][$button]['#id'] = drupal_html_id('edit-webform-ajax-' . $button . '-' .$form['#node']->nid);
++        $submit_id = drupal_html_id('edit-webform-ajax-' . $button . '-' .$form['#node']->nid);
++        $form['actions'][$button]['#attributes']['id'] = $submit_id;
++        $form['actions'][$button]['#id'] = $submit_id;
+       }
+     }
+   }
